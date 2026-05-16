@@ -1,0 +1,16 @@
+package sdktest
+
+import (
+	"testing"
+
+	sdk "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk"
+)
+
+func TestExists(t *testing.T) {
+	t.Run("test-mode", func(t *testing.T) {
+		testsdk := sdk.TestSDK(nil, nil)
+		if testsdk == nil {
+			t.Fatal("expected non-nil SDK")
+		}
+	})
+}
