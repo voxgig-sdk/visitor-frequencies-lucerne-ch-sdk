@@ -1,6 +1,6 @@
 package utility
 
-import "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/core"
+import "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/core"
 
 func featureAddUtil(ctx *core.Context, f core.Feature) {
 	client := ctx.Client

@@ -1,10 +1,10 @@
 package voxgigvisitorfrequencieslucernechsdk
 
 import (
-	"github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/core"
-	"github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/entity"
-	"github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/feature"
-	_ "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/utility"
+	"github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/core"
+	"github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/entity"
+	"github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/feature"
+	_ "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/utility"
 )
 
 // Type aliases preserve external API.

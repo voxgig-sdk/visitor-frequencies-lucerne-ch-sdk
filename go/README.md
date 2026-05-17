@@ -5,14 +5,14 @@ The Golang SDK for the VisitorFrequenciesLucerneCh API. Provides an entity-orien
 
 ## Install
 ```bash
-go get github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk
+go get github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go
 ```
 
 If the module is not yet published to a registry, use a `replace` directive
 in your `go.mod` to point to a local checkout:
 
 ```bash
-go mod edit -replace github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk=../path/to/github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk
+go mod edit -replace github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go=../path/to/github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go
 ```
 
 
@@ -30,8 +30,8 @@ import (
     "fmt"
     "os"
 
-    sdk "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk"
-    "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/core"
+    sdk "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go"
+    "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/core"
 )
 
 func main() {
@@ -316,7 +316,7 @@ Use `core.ToMapAny()` to safely cast results and nested data.
 ### Package structure
 
 ```
-github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/
+github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/
 ├── visitor-frequencies-lucerne-ch.go        # Root package — type aliases and constructors
 ├── core/               # SDK core — client, types, pipeline
 ├── entity/             # Entity implementations
@@ -325,7 +325,7 @@ github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/
 └── test/               # Test suites
 ```
 
-The root package (`github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk`) re-exports everything needed
+The root package (`github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go`) re-exports everything needed
 for normal use. Import sub-packages only when you need specific types
 like `core.ToMapAny`.
 

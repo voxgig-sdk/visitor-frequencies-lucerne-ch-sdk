@@ -1,6 +1,6 @@
 package utility
 
-import "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/core"
+import "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/core"
 
 func makeResultUtil(ctx *core.Context) (*core.Result, error) {
 	if ctx.Out["result"] != nil {

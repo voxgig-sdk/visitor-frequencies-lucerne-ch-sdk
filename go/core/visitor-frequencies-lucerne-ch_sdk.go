@@ -3,7 +3,7 @@ package core
 import (
 	"fmt"
 
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/utility/struct"
 )
 
 type VisitorFrequenciesLucerneChSDK struct {

@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk"
-	"github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/core"
+	sdk "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go"
+	"github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/core"
 
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/utility/struct"
 )
 
 func TestSearchEntity(t *testing.T) {

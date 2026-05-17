@@ -1,6 +1,6 @@
 package utility
 
-import "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/core"
+import "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/core"
 
 func doneUtil(ctx *core.Context) (any, error) {
 	if ctx.Ctrl.Explain != nil {

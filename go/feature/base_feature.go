@@ -1,7 +1,7 @@
 package feature
 
 import (
-	"github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/core"
+	"github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go/core"
 )
 
 type BaseFeature struct {
