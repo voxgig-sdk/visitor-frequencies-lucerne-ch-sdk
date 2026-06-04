@@ -20,9 +20,7 @@ loading a specific record.
 <?php
 require_once 'visitorfrequencieslucernech_sdk.php';
 
-$client = new VisitorFrequenciesLucerneChSDK([
-    "apikey" => getenv("VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"),
-]);
+$client = new VisitorFrequenciesLucerneChSDK([]);
 ```
 
 ### 2. List searchs
@@ -119,7 +117,6 @@ Create a `.env.local` file at the project root:
 
 ```
 VISITOR-FREQUENCIES-LUCERNE-CH_TEST_LIVE=TRUE
-VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY=<your-key>
 ```
 
 Then run:
@@ -142,7 +139,6 @@ Creates a new SDK client.
 
 | Option | Type | Description |
 | --- | --- | --- |
-| `apikey` | `string` | API key for authentication. |
 | `base` | `string` | Base URL of the API server. |
 | `prefix` | `string` | URL path prefix prepended to all requests. |
 | `suffix` | `string` | URL path suffix appended to all requests. |

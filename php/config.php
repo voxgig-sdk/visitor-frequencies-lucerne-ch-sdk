@@ -20,9 +20,6 @@ class VisitorFrequenciesLucerneChConfig
             ],
             "options" => [
                 "base" => "https://data.stadtluzern.ch",
-                "auth" => [
-                    "prefix" => "Bearer",
-                ],
                 "headers" => [
           'content-type' => 'application/json',
         ],

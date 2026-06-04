@@ -83,7 +83,6 @@ def search_basic_setup(extra)
     "VISITORFREQUENCIESLUCERNECH_TEST_SEARCH_ENTID" => idmap,
     "VISITORFREQUENCIESLUCERNECH_TEST_LIVE" => "FALSE",
     "VISITORFREQUENCIESLUCERNECH_TEST_EXPLAIN" => "FALSE",
-    "VISITORFREQUENCIESLUCERNECH_APIKEY" => "NONE",
   })
 
   idmap_resolved = Helpers.to_map(
@@ -95,7 +94,6 @@ def search_basic_setup(extra)
   if env["VISITORFREQUENCIESLUCERNECH_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
-        "apikey" => env["VISITORFREQUENCIESLUCERNECH_APIKEY"],
       },
       extra || {},
     ])

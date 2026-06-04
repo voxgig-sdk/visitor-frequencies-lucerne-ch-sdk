@@ -17,9 +17,7 @@ loading a specific record.
 ```ts
 import { VisitorFrequenciesLucerneChSDK } from 'visitor-frequencies-lucerne-ch'
 
-const client = new VisitorFrequenciesLucerneChSDK({
-  apikey: process.env.VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY,
-})
+const client = new VisitorFrequenciesLucerneChSDK({})
 ```
 
 ### 2. List searchs
@@ -84,7 +82,7 @@ const result = await client.Planet().load({ id: 'test01' })
 You can also use the instance method:
 
 ```ts
-const client = new VisitorFrequenciesLucerneChSDK({ apikey: '...' })
+const client = new VisitorFrequenciesLucerneChSDK()
 const testClient = client.tester()
 ```
 
@@ -120,7 +118,6 @@ const logger = {
 }
 
 const client = new VisitorFrequenciesLucerneChSDK({
-  apikey: '...',
   extend: [logger],
 })
 ```
@@ -131,7 +128,6 @@ Create a `.env.local` file at the project root:
 
 ```
 VISITOR-FREQUENCIES-LUCERNE-CH_TEST_LIVE=TRUE
-VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY=<your-key>
 ```
 
 Then run:
@@ -149,7 +145,6 @@ cd ts && npm test
 
 ```ts
 new VisitorFrequenciesLucerneChSDK(options?: {
-  apikey?: string
   base?: string
   prefix?: string
   suffix?: string
@@ -160,7 +155,6 @@ new VisitorFrequenciesLucerneChSDK(options?: {
 
 | Option | Type | Description |
 | --- | --- | --- |
-| `apikey` | `string` | API key for authentication. |
 | `base` | `string` | Base URL of the API server. |
 | `prefix` | `string` | URL path prefix prepended to all requests. |
 | `suffix` | `string` | URL path suffix appended to all requests. |

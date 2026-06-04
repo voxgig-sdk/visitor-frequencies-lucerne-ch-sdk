@@ -23,12 +23,9 @@ loading a specific record.
 ### 1. Create a client
 
 ```python
-import os
 from visitorfrequencieslucernech_sdk import VisitorFrequenciesLucerneChSDK
 
-client = VisitorFrequenciesLucerneChSDK({
-    "apikey": os.environ.get("VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"),
-})
+client = VisitorFrequenciesLucerneChSDK({})
 ```
 
 ### 2. List searchs
@@ -121,7 +118,6 @@ Create a `.env.local` file at the project root:
 
 ```
 VISITOR-FREQUENCIES-LUCERNE-CH_TEST_LIVE=TRUE
-VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY=<your-key>
 ```
 
 Then run:
@@ -145,7 +141,6 @@ Creates a new SDK client.
 
 | Option | Type | Description |
 | --- | --- | --- |
-| `apikey` | `str` | API key for authentication. |
 | `base` | `str` | Base URL of the API server. |
 | `prefix` | `str` | URL path prefix prepended to all requests. |
 | `suffix` | `str` | URL path suffix appended to all requests. |
