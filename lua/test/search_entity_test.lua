@@ -92,6 +92,7 @@ function search_basic_setup(extra)
     ["VISITORFREQUENCIESLUCERNECH_TEST_SEARCH_ENTID"] = idmap,
     ["VISITORFREQUENCIESLUCERNECH_TEST_LIVE"] = "FALSE",
     ["VISITORFREQUENCIESLUCERNECH_TEST_EXPLAIN"] = "FALSE",
+    ["VISITORFREQUENCIESLUCERNECH_APIKEY"] = "NONE",
   })
 
   local idmap_resolved = helpers.to_map(
@@ -103,6 +104,7 @@ function search_basic_setup(extra)
   if env["VISITORFREQUENCIESLUCERNECH_TEST_LIVE"] == "TRUE" then
     local merged_opts = vs.merge({
       {
+        apikey = env["VISITORFREQUENCIESLUCERNECH_APIKEY"],
       },
       extra or {},
     })

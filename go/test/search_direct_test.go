@@ -93,12 +93,14 @@ func searchDirectSetup(mockres any) *searchDirectSetupResult {
 	env := envOverride(map[string]any{
 		"VISITORFREQUENCIESLUCERNECH_TEST_SEARCH_ENTID": map[string]any{},
 		"VISITORFREQUENCIESLUCERNECH_TEST_LIVE":    "FALSE",
+		"VISITORFREQUENCIESLUCERNECH_APIKEY":       "NONE",
 	})
 
 	live := env["VISITORFREQUENCIESLUCERNECH_TEST_LIVE"] == "TRUE"
 
 	if live {
 		mergedOpts := map[string]any{
+			"apikey": env["VISITORFREQUENCIESLUCERNECH_APIKEY"],
 		}
 		client := sdk.NewVisitorFrequenciesLucerneChSDK(mergedOpts)
 

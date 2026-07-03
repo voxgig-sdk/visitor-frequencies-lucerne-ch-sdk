@@ -113,6 +113,7 @@ function basicSetup(extra?: any) {
     'VISITOR_FREQUENCIES_LUCERNE_CH_TEST_SEARCH_ENTID': idmap,
     'VISITOR_FREQUENCIES_LUCERNE_CH_TEST_LIVE': 'FALSE',
     'VISITOR_FREQUENCIES_LUCERNE_CH_TEST_EXPLAIN': 'FALSE',
+    'VISITOR_FREQUENCIES_LUCERNE_CH_APIKEY': 'NONE',
   })
 
   idmap = env['VISITOR_FREQUENCIES_LUCERNE_CH_TEST_SEARCH_ENTID']
@@ -122,6 +123,7 @@ function basicSetup(extra?: any) {
   if (live) {
     client = new VisitorFrequenciesLucerneChSDK(merge([
       {
+        apikey: env.VISITOR_FREQUENCIES_LUCERNE_CH_APIKEY,
       },
       extra
     ]))

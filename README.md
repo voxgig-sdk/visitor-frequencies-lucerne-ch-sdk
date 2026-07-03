@@ -1,19 +1,8 @@
 # VisitorFrequenciesLucerneCh SDK
 
-Live pedestrian and visitor counts from sensors in public spaces around the city of Lucerne, Switzerland
+Visitor Frequencies Lucerne (CH) client, generated from the OpenAPI spec.
 
 > TypeScript, Python, PHP, Golang, Ruby, Lua SDKs, a CLI, an interactive REPL, and an MCP server for AI agents — all generated from one OpenAPI spec by [@voxgig/sdkgen](https://github.com/voxgig/sdkgen).
-
-## About Visitor Frequencies Lucerne (CH)
-
-This SDK wraps the **Visitor Frequencies Lucerne** API, an open-data feed published by the [City of Lucerne](https://www.stadtluzern.ch/) (Stadt Luzern) as part of its open government data initiative at `data.stadtluzern.ch`. It surfaces near real-time foot-traffic measurements from sensors placed at public locations around the Swiss city.
-
-What you get from the API:
-
-- Visitor / pedestrian frequency readings from multiple sensor locations across Lucerne
-- A simple `search` style query interface for retrieving the latest sensor data
-
-Operational notes: the upstream endpoint expects an API key embedded in the request URL. CORS is enabled, and no explicit rate limits are published. Licence terms are not stated on the catalogue page — check the `data.stadtluzern.ch` portal for the applicable terms of use before redistributing the data.
 
 ## Try it
 
@@ -47,29 +36,31 @@ gem install visitor-frequencies-lucerne-ch-sdk
 luarocks install visitor-frequencies-lucerne-ch-sdk
 ```
 
-## 30-second quickstart
+## Quickstart
 
 ### TypeScript
 
 ```ts
 import { VisitorFrequenciesLucerneChSDK } from 'visitor-frequencies-lucerne-ch'
 
-const client = new VisitorFrequenciesLucerneChSDK({})
+const client = new VisitorFrequenciesLucerneChSDK({
+  apikey: process.env.VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY,
+})
 
 // List all searchs
 const searchs = await client.Search().list()
+console.log(searchs.data)
 ```
 
-See the [TypeScript README](ts/README.md) for the
-full guide, or scroll down for the same example in other languages.
+See the [TypeScript README](ts/README.md) for the full guide.
 
-## What's in the box
+## Surfaces
 
-| Surface | Use it for | Path |
-| --- | --- | --- |
-| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | App integration | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
-| **CLI** | Scripts, CI, ops, one-off API calls | `go-cli/` |
-| **MCP server** | AI agents (Claude, Cursor, Cline) | `go-mcp/` |
+| Surface | Path |
+| --- | --- |
+| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
+| **CLI** | `go-cli/` |
+| **MCP server** | `go-mcp/` |
 
 ## Use it from an AI agent (MCP)
 
@@ -99,7 +90,7 @@ The API exposes one entity:
 
 | Entity | Description | API path |
 | --- | --- | --- |
-| **Search** | Query interface for retrieving live visitor / pedestrian frequency readings from the city's sensor network. | `/api/records/1.0/search/` |
+| **Search** |  | `/api/records/1.0/search/` |
 
 Each entity supports the following operations where available: **load**,
 **list**, **create**, **update**, and **remove**.
@@ -109,12 +100,16 @@ Each entity supports the following operations where available: **load**,
 ### Python
 
 ```python
+import os
 from visitorfrequencieslucernech_sdk import VisitorFrequenciesLucerneChSDK
 
-client = VisitorFrequenciesLucerneChSDK({})
+client = VisitorFrequenciesLucerneChSDK({
+    "apikey": os.environ.get("VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"),
+})
 
 # List all searchs
-searchs, err = client.Search(None).list(None, None)
+searchs, err = client.Search().list()
+print(searchs)
 ```
 
 ### PHP
@@ -123,10 +118,13 @@ searchs, err = client.Search(None).list(None, None)
 <?php
 require_once 'visitorfrequencieslucernech_sdk.php';
 
-$client = new VisitorFrequenciesLucerneChSDK([]);
+$client = new VisitorFrequenciesLucerneChSDK([
+    "apikey" => getenv("VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"),
+]);
 
 // List all searchs
-[$searchs, $err] = $client->Search(null)->list(null, null);
+[$searchs, $err] = $client->Search()->list();
+print_r($searchs);
 ```
 
 ### Golang
@@ -134,10 +132,13 @@ $client = new VisitorFrequenciesLucerneChSDK([]);
 ```go
 import sdk "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go"
 
-client := sdk.NewVisitorFrequenciesLucerneChSDK(map[string]any{})
+client := sdk.NewVisitorFrequenciesLucerneChSDK(map[string]any{
+    "apikey": os.Getenv("VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"),
+})
 
 // List all searchs
 searchs, err := client.Search(nil).List(nil, nil)
+fmt.Println(searchs)
 ```
 
 ### Ruby
@@ -145,10 +146,13 @@ searchs, err := client.Search(nil).List(nil, nil)
 ```ruby
 require_relative "VisitorFrequenciesLucerneCh_sdk"
 
-client = VisitorFrequenciesLucerneChSDK.new({})
+client = VisitorFrequenciesLucerneChSDK.new({
+  "apikey" => ENV["VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"],
+})
 
 # List all searchs
-searchs, err = client.Search(nil).list(nil, nil)
+searchs, err = client.Search().list
+puts searchs
 ```
 
 ### Lua
@@ -156,10 +160,13 @@ searchs, err = client.Search(nil).list(nil, nil)
 ```lua
 local sdk = require("visitor-frequencies-lucerne-ch_sdk")
 
-local client = sdk.new({})
+local client = sdk.new({
+  apikey = os.getenv("VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"),
+})
 
 -- List all searchs
-local searchs, err = client:Search(nil):list(nil, nil)
+local searchs, err = client:Search():list()
+print(searchs)
 ```
 
 ## Unit testing in offline mode
@@ -178,25 +185,21 @@ const result = await client.Search().load({ id: 'test01' })
 ### Python
 
 ```python
-client = VisitorFrequenciesLucerneChSDK.test(None, None)
-result, err = client.Search(None).load(
-    {"id": "test01"}, None
-)
+client = VisitorFrequenciesLucerneChSDK.test()
+result, err = client.Search().load({"id": "test01"})
 ```
 
 ### PHP
 
 ```php
-$client = VisitorFrequenciesLucerneChSDK::test(null, null);
-[$result, $err] = $client->Search(null)->load(
-    ["id" => "test01"], null
-);
+$client = VisitorFrequenciesLucerneChSDK::test();
+[$result, $err] = $client->Search()->load(["id" => "test01"]);
 ```
 
 ### Golang
 
 ```go
-client := sdk.TestSDK(nil, nil)
+client := sdk.Test()
 result, err := client.Search(nil).Load(
     map[string]any{"id": "test01"}, nil,
 )
@@ -205,19 +208,15 @@ result, err := client.Search(nil).Load(
 ### Ruby
 
 ```ruby
-client = VisitorFrequenciesLucerneChSDK.test(nil, nil)
-result, err = client.Search(nil).load(
-  { "id" => "test01" }, nil
-)
+client = VisitorFrequenciesLucerneChSDK.test
+result, err = client.Search().load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
-local client = sdk.test(nil, nil)
-local result, err = client:Search(nil):load(
-  { id = "test01" }, nil
-)
+local client = sdk.test()
+local result, err = client:Search():load({ id = "test01" })
 ```
 
 ## How it works
@@ -321,11 +320,6 @@ local result, err = client:direct({
 - [Golang](go/README.md)
 - [Ruby](rb/README.md)
 - [Lua](lua/README.md)
-
-## Using the Visitor Frequencies Lucerne (CH)
-
-- Upstream: [https://data.stadtluzern.ch](https://data.stadtluzern.ch)
-- API docs: [https://freepublicapis.com/visitor-frequencies-lucerne-ch](https://freepublicapis.com/visitor-frequencies-lucerne-ch)
 
 ---
 

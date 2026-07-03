@@ -62,12 +62,14 @@ def search_direct_setup(mockres)
   env = Runner.env_override({
     "VISITORFREQUENCIESLUCERNECH_TEST_SEARCH_ENTID" => {},
     "VISITORFREQUENCIESLUCERNECH_TEST_LIVE" => "FALSE",
+    "VISITORFREQUENCIESLUCERNECH_APIKEY" => "NONE",
   })
 
   live = env["VISITORFREQUENCIESLUCERNECH_TEST_LIVE"] == "TRUE"
 
   if live
     merged_opts = {
+      "apikey" => env["VISITORFREQUENCIESLUCERNECH_APIKEY"],
     }
     client = VisitorFrequenciesLucerneChSDK.new(merged_opts)
     return {

@@ -17,21 +17,7 @@ main: {
       ]
       title: "Visitor Frequencies Lucerne (CH)"
       version: "1.0.0"
-      tagline: "Live pedestrian and visitor counts from sensors in public spaces around the city of Lucerne, Switzerland"
-      homepage: "https://data.stadtluzern.ch"
-      docs_url: "https://freepublicapis.com/visitor-frequencies-lucerne-ch"
-      about_md: `This SDK wraps the **Visitor Frequencies Lucerne** API, an open-data feed published by the [City of Lucerne](https://www.stadtluzern.ch/) (Stadt Luzern) as part of its open government data initiative at \`data.stadtluzern.ch\`. It surfaces near real-time foot-traffic measurements from sensors placed at public locations around the Swiss city.
-
-What you get from the API:
-
-- Visitor / pedestrian frequency readings from multiple sensor locations across Lucerne
-- A simple \`search\` style query interface for retrieving the latest sensor data
-
-Operational notes: the upstream endpoint expects an API key embedded in the request URL. CORS is enabled, and no explicit rate limits are published. Licence terms are not stated on the catalogue page — check the \`data.stadtluzern.ch\` portal for the applicable terms of use before redistributing the data.`
-      entity_desc: {
-        search: "Query interface for retrieving live visitor / pedestrian frequency readings from the city's sensor network."
-      }
-      auth: false
     }
   }
 }
+
