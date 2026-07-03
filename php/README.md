@@ -10,7 +10,7 @@ The PHP SDK for the VisitorFrequenciesLucerneCh API — an entity-oriented clien
 
 ## Install
 ```bash
-composer require voxgig/visitor-frequencies-lucerne-ch-sdk
+composer require voxgig-sdk/visitor-frequencies-lucerne-ch
 ```
 
 

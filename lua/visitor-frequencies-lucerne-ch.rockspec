@@ -8,12 +8,14 @@ source = {
   dir = "visitor-frequencies-lucerne-ch-sdk/lua"
 }
 description = {
-  summary = "VisitorFrequenciesLucerneCh SDK for Lua",
-  license = "MIT"
+  summary = "Unofficial generated Lua SDK for the Visitor Frequencies Lucerne (CH) public API. Not affiliated with or endorsed by the upstream API provider.",
+  homepage = "https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk",
+  issues_url = "https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/issues",
+  license = "MIT",
+  labels = { "voxgig", "sdk", "generated-sdk", "openapi", "api-client", "visitor-frequencies-lucerne-ch" }
 }
 dependencies = {
   "lua >= 5.3",
-  "dkjson >= 2.5",
   "dkjson >= 2.5",
 }
 build = {

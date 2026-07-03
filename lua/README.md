@@ -10,7 +10,7 @@ The Lua SDK for the VisitorFrequenciesLucerneCh API — an entity-oriented clien
 
 ## Install
 ```bash
-luarocks install visitor-frequencies-lucerne-ch-sdk
+luarocks install voxgig-sdk-visitor-frequencies-lucerne-ch
 ```
 
 If the module is not yet published, add the source directory to

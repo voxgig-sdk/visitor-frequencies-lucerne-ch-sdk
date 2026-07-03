@@ -10,13 +10,13 @@ The Ruby SDK for the VisitorFrequenciesLucerneCh API — an entity-oriented clie
 
 ## Install
 ```bash
-gem install visitor-frequencies-lucerne-ch-sdk
+gem install voxgig-sdk-visitor-frequencies-lucerne-ch
 ```
 
 Or add to your `Gemfile`:
 
 ```ruby
-gem "visitor-frequencies-lucerne-ch-sdk"
+gem "voxgig-sdk-visitor-frequencies-lucerne-ch"
 ```
 
 Then run:

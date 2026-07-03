@@ -10,7 +10,7 @@ The TypeScript SDK for the VisitorFrequenciesLucerneCh API — a type-safe, enti
 
 ## Install
 ```bash
-npm install visitor-frequencies-lucerne-ch
+npm install @voxgig-sdk/visitor-frequencies-lucerne-ch
 ```
 ## Tutorial: your first API call
 

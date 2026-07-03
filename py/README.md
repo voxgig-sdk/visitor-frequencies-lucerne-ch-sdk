@@ -10,7 +10,7 @@ The Python SDK for the VisitorFrequenciesLucerneCh API — an entity-oriented cl
 
 ## Install
 ```bash
-pip install visitor-frequencies-lucerne-ch-sdk
+pip install voxgig-sdk-visitor-frequencies-lucerne-ch
 ```
 
 Or install from source:
