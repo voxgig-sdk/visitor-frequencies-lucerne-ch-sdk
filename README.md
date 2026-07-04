@@ -10,26 +10,24 @@ This is an unofficial SDK for the Visitor Frequencies Lucerne (CH) public API, g
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/visitor-frequencies-lucerne-ch` | `npm install @voxgig-sdk/visitor-frequencies-lucerne-ch` |
-| Python | `voxgig-sdk-visitor-frequencies-lucerne-ch` | `pip install voxgig-sdk-visitor-frequencies-lucerne-ch` |
-| PHP | `voxgig-sdk/visitor-frequencies-lucerne-ch` | `composer require voxgig-sdk/visitor-frequencies-lucerne-ch` |
-| Golang | `github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go` | `go get github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go` |
-| Ruby | `voxgig-sdk-visitor-frequencies-lucerne-ch` | `gem install voxgig-sdk-visitor-frequencies-lucerne-ch` |
-| Lua | `voxgig-sdk-visitor-frequencies-lucerne-ch` | `luarocks install voxgig-sdk-visitor-frequencies-lucerne-ch` |
+| TypeScript | `@voxgig-sdk/visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
+| Python | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
+| PHP | `voxgig-sdk/visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
+| Golang | `github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go` | `go get github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go@latest` |
+| Ruby | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
+| Lua | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
 
 ## Quickstart
 
 ### TypeScript
 
 ```ts
-import { VisitorFrequenciesLucerneChSDK } from 'visitor-frequencies-lucerne-ch'
+import { VisitorFrequenciesLucerneChSDK } from '@voxgig-sdk/visitor-frequencies-lucerne-ch'
 
-const client = new VisitorFrequenciesLucerneChSDK({
-  apikey: process.env.VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY,
-})
+const client = new VisitorFrequenciesLucerneChSDK()
 
 // List all searchs
-const searchs = await client.Search().list()
+const searchs = await client.search.list()
 console.log(searchs.data)
 ```
 
@@ -71,7 +69,7 @@ The API exposes one entity:
 
 | Entity | Description | API path |
 | --- | --- | --- |
-| **Search** |  | `/api/records/1.0/search/` |
+| **Search** | The Search entity (list). | `/api/records/1.0/search/` |
 
 Each entity supports the following operations where available: **load**,
 **list**, **create**, **update**, and **remove**.
@@ -81,15 +79,12 @@ Each entity supports the following operations where available: **load**,
 ### Python
 
 ```python
-import os
 from visitorfrequencieslucernech_sdk import VisitorFrequenciesLucerneChSDK
 
-client = VisitorFrequenciesLucerneChSDK({
-    "apikey": os.environ.get("VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"),
-})
+client = VisitorFrequenciesLucerneChSDK()
 
 # List all searchs
-searchs, err = client.Search().list()
+searchs = client.search.list()
 print(searchs)
 ```
 
@@ -99,12 +94,10 @@ print(searchs)
 <?php
 require_once 'visitorfrequencieslucernech_sdk.php';
 
-$client = new VisitorFrequenciesLucerneChSDK([
-    "apikey" => getenv("VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"),
-]);
+$client = new VisitorFrequenciesLucerneChSDK();
 
-// List all searchs
-[$searchs, $err] = $client->Search()->list();
+// List all searchs (throws on error)
+$searchs = $client->search()->list();
 print_r($searchs);
 ```
 
@@ -113,9 +106,7 @@ print_r($searchs);
 ```go
 import sdk "github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go"
 
-client := sdk.NewVisitorFrequenciesLucerneChSDK(map[string]any{
-    "apikey": os.Getenv("VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"),
-})
+client := sdk.New()
 
 // List all searchs
 searchs, err := client.Search(nil).List(nil, nil)
@@ -127,12 +118,10 @@ fmt.Println(searchs)
 ```ruby
 require_relative "VisitorFrequenciesLucerneCh_sdk"
 
-client = VisitorFrequenciesLucerneChSDK.new({
-  "apikey" => ENV["VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"],
-})
+client = VisitorFrequenciesLucerneChSDK.new
 
 # List all searchs
-searchs, err = client.Search().list
+searchs = client.search.list
 puts searchs
 ```
 
@@ -141,12 +130,10 @@ puts searchs
 ```lua
 local sdk = require("visitor-frequencies-lucerne-ch_sdk")
 
-local client = sdk.new({
-  apikey = os.getenv("VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"),
-})
+local client = sdk.new()
 
 -- List all searchs
-local searchs, err = client:Search():list()
+local searchs, err = client:search():list()
 print(searchs)
 ```
 
@@ -159,7 +146,7 @@ in-memory mock, so unit tests run offline.
 
 ```ts
 const client = VisitorFrequenciesLucerneChSDK.test()
-const result = await client.Search().load({ id: 'test01' })
+const result = await client.search.load({ id: 'test01' })
 // result.ok === true, result.data contains mock data
 ```
 
@@ -167,14 +154,14 @@ const result = await client.Search().load({ id: 'test01' })
 
 ```python
 client = VisitorFrequenciesLucerneChSDK.test()
-result, err = client.Search().load({"id": "test01"})
+result = client.search.load({"id": "test01"})
 ```
 
 ### PHP
 
 ```php
 $client = VisitorFrequenciesLucerneChSDK::test();
-[$result, $err] = $client->Search()->load(["id" => "test01"]);
+$result = $client->search()->load(["id" => "test01"]);
 ```
 
 ### Golang
@@ -190,14 +177,14 @@ result, err := client.Search(nil).Load(
 
 ```ruby
 client = VisitorFrequenciesLucerneChSDK.test
-result, err = client.Search().load({ "id" => "test01" })
+result = client.search.load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
 local client = sdk.test()
-local result, err = client:Search():load({ id = "test01" })
+local result, err = client:search():load({ id = "test01" })
 ```
 
 ## How it works
@@ -250,7 +237,7 @@ console.log(result.data)
 
 **Python:**
 ```python
-result, err = client.direct({
+result = client.direct({
     "path": "/api/resource/{id}",
     "method": "GET",
     "params": {"id": "example"},
@@ -259,7 +246,7 @@ result, err = client.direct({
 
 **PHP:**
 ```php
-[$result, $err] = $client->direct([
+$result = $client->direct([
     "path" => "/api/resource/{id}",
     "method" => "GET",
     "params" => ["id" => "example"],
@@ -277,7 +264,7 @@ result, err := client.Direct(map[string]any{
 
 **Ruby:**
 ```ruby
-result, err = client.direct({
+result = client.direct({
   "path" => "/api/resource/{id}",
   "method" => "GET",
   "params" => { "id" => "example" },

@@ -9,12 +9,9 @@ The Lua SDK for the VisitorFrequenciesLucerneCh API — an entity-oriented clien
 
 
 ## Install
-```bash
-luarocks install voxgig-sdk-visitor-frequencies-lucerne-ch
-```
-
-If the module is not yet published, add the source directory to
-your `LUA_PATH`:
+This package is not yet published to LuaRocks. Install it from the
+GitHub release tag (`lua/vX.Y.Z`, see [Releases](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases)),
+or add the source directory to your `LUA_PATH`:
 
 ```bash
 export LUA_PATH="path/to/lua/?.lua;path/to/lua/?/init.lua;;"
@@ -31,15 +28,13 @@ loading a specific record.
 ```lua
 local sdk = require("visitor-frequencies-lucerne-ch_sdk")
 
-local client = sdk.new({
-  apikey = os.getenv("VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY"),
-})
+local client = sdk.new()
 ```
 
 ### 2. List searchs
 
 ```lua
-local result, err = client:Search():list()
+local result, err = client:search():list()
 if err then error(err) end
 
 if type(result) == "table" then
@@ -93,7 +88,7 @@ Create a mock client for unit testing — no server required:
 ```lua
 local client = sdk.test()
 
-local result, err = client:VisitorFrequenciesLucerneCh():load({ id = "test01" })
+local result, err = client:search():load({ id = "test01" })
 -- result contains mock response data
 ```
 
@@ -126,8 +121,7 @@ local client = sdk.new({
 Create a `.env.local` file at the project root:
 
 ```
-VISITOR-FREQUENCIES-LUCERNE-CH_TEST_LIVE=TRUE
-VISITOR-FREQUENCIES-LUCERNE-CH_APIKEY=<your-key>
+VISITOR_FREQUENCIES_LUCERNE_CH_TEST_LIVE=TRUE
 ```
 
 Then run:
@@ -150,7 +144,6 @@ Creates a new SDK client.
 
 | Option | Type | Description |
 | --- | --- | --- |
-| `apikey` | `string` | API key for authentication. |
 | `base` | `string` | Base URL of the API server. |
 | `prefix` | `string` | URL path prefix prepended to all requests. |
 | `suffix` | `string` | URL path suffix appended to all requests. |
@@ -231,7 +224,7 @@ API path: `/api/records/1.0/search/`
 
 ### Search
 
-Create an instance: `const search = client.Search()`
+Create an instance: `const search = client.search`
 
 #### Operations
 
@@ -252,7 +245,7 @@ Create an instance: `const search = client.Search()`
 #### Example: List
 
 ```ts
-const searchs = await client.Search().list()
+const searchs = await client.search.list()
 ```
 
 
@@ -327,11 +320,11 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```lua
-local moon = client:Moon(nil)
-moon:load({ planet_id = "earth", id = "luna" }, nil)
+local search = client:search()
+search:load({ id = "example_id" })
 
--- moon:data_get() now returns the loaded moon data
--- moon:match_get() returns the last match criteria
+-- search:data_get() now returns the loaded search data
+-- search:match_get() returns the last match criteria
 ```
 
 Call `make()` to create a fresh instance with the same configuration

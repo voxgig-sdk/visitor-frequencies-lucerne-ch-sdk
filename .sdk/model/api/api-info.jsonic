@@ -4,6 +4,7 @@
 main: {
   kit: {
     info: {
+      auth: false
       contact: {
         name: "OpenData Swiss"
         url: "https://opendata.swiss/de/dataset/besucherfrequenzen-im-offentlichen-raum-api/resource/f5ee2f59-07fc-4142-b2be-416e3f4666eb"

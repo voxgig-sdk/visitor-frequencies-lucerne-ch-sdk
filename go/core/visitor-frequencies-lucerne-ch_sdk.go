@@ -245,6 +245,9 @@ func (sdk *VisitorFrequenciesLucerneChSDK) Direct(fetchargs map[string]any) (map
 }
 
 
+// Search returns a Search entity bound to this client.
+// Idiomatic usage: client.Search(nil).List(nil, nil) or
+// client.Search(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *VisitorFrequenciesLucerneChSDK) Search(data map[string]any) VisitorFrequenciesLucerneChEntity {
 	return NewSearchEntityFunc(sdk, data)
 }
