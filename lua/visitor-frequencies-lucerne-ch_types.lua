@@ -14,6 +14,11 @@
 ---@field recordid? string
 
 ---@class SearchListMatch
+---@field datasetid? string
+---@field field? table
+---@field geometry? table
+---@field record_timestamp? string
+---@field recordid? string
 
 local M = {}
 

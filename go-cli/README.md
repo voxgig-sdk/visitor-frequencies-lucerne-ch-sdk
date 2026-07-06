@@ -17,8 +17,6 @@ go build -o visitor-frequencies-lucerne-ch-cli ./...
 ```sh
 # One-shot: arguments form a single AQL expression
 ./visitor-frequencies-lucerne-ch-cli list search
-./visitor-frequencies-lucerne-ch-cli load 1 search
-./visitor-frequencies-lucerne-ch-cli load '{id:1}' search
 
 # REPL
 ./visitor-frequencies-lucerne-ch-cli
@@ -29,8 +27,6 @@ go build -o visitor-frequencies-lucerne-ch-cli ./...
 | Word     | Signatures                                   | Description                |
 |----------|----------------------------------------------|----------------------------|
 | `list`   | `[entity]` · `[query entity]`                | List records               |
-| `load`   | `[entity]` · `[query entity]`                | Load a single record       |
-| `update` | `[entity]` · `[query entity]`                | Update a record            |
 
 `query` is either a Map (`{id:1}`) or a Scalar (`1`, treated as `{id:1}`).
 `entity` is one of the SDK's entity names (auto-quoted as an atom).

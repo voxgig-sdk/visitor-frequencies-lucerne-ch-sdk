@@ -8,7 +8,7 @@ Complete API reference for the VisitorFrequenciesLucerneCh Python SDK.
 ### Constructor
 
 ```python
-from visitor-frequencies-lucerne-ch_sdk import VisitorFrequenciesLucerneChSDK
+from visitorfrequencieslucernech_sdk import VisitorFrequenciesLucerneChSDK
 
 client = VisitorFrequenciesLucerneChSDK(options)
 ```
@@ -87,20 +87,20 @@ search = client.Search()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `datasetid` | ``$STRING`` | No |  |
-| `field` | ``$OBJECT`` | No |  |
-| `geometry` | ``$OBJECT`` | No |  |
-| `record_timestamp` | ``$STRING`` | No |  |
-| `recordid` | ``$STRING`` | No |  |
+| `datasetid` | `str` | No |  |
+| `field` | `dict` | No |  |
+| `geometry` | `dict` | No |  |
+| `record_timestamp` | `str` | No |  |
+| `recordid` | `str` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl=None) -> list`
+#### `list(reqmatch=None, ctrl=None) -> list`
 
-List entities matching the given criteria. Returns a list and raises on error.
+List entities matching the given criteria. The match is optional — call `list()` with no argument to list all records. Returns a list and raises on error.
 
 ```python
-results = client.Search().list({})
+results = client.Search().list()
 for search in results:
     print(search)
 ```

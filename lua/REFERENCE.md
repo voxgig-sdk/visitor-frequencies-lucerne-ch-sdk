@@ -90,11 +90,11 @@ local search = client:Search(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `datasetid` | ``$STRING`` | No |  |
-| `field` | ``$OBJECT`` | No |  |
-| `geometry` | ``$OBJECT`` | No |  |
-| `record_timestamp` | ``$STRING`` | No |  |
-| `recordid` | ``$STRING`` | No |  |
+| `datasetid` | `string` | No |  |
+| `field` | `table` | No |  |
+| `geometry` | `table` | No |  |
+| `record_timestamp` | `string` | No |  |
+| `recordid` | `string` | No |  |
 
 ### Operations
 

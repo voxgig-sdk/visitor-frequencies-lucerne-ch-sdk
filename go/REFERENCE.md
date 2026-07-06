@@ -97,11 +97,11 @@ search := client.Search(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `datasetid` | ``$STRING`` | No |  |
-| `field` | ``$OBJECT`` | No |  |
-| `geometry` | ``$OBJECT`` | No |  |
-| `record_timestamp` | ``$STRING`` | No |  |
-| `recordid` | ``$STRING`` | No |  |
+| `datasetid` | `string` | No |  |
+| `field` | `map[string]any` | No |  |
+| `geometry` | `map[string]any` | No |  |
+| `record_timestamp` | `string` | No |  |
+| `recordid` | `string` | No |  |
 
 ### Operations
 

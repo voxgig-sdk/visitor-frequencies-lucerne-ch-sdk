@@ -13,5 +13,11 @@ export interface Search {
   recordid?: string
 }
 
-export type SearchListMatch = Partial<Search>
+export interface SearchListMatch {
+  datasetid?: string
+  field?: Record<string, any>
+  geometry?: Record<string, any>
+  record_timestamp?: string
+  recordid?: string
+}
 
