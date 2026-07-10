@@ -6,9 +6,6 @@
     },
     "kit": {
       "config": {
-        "auth": {
-          "prefix": "Bearer"
-        },
         "docs_order": [
           "ts",
           "py",
@@ -300,14 +297,17 @@
           "url": "https://opendata.swiss/de/dataset/besucherfrequenzen-im-offentlichen-raum-api/resource/f5ee2f59-07fc-4142-b2be-416e3f4666eb"
         },
         "description": "Live visitor frequencies in public spaces in Lucerne, Switzerland.",
+        "meta_source": "https://www.freepublicapis.com",
         "servers": [
           {
             "description": "Production server",
             "url": "https://data.stadtluzern.ch"
           }
         ],
+        "summary": "Live visitor frequencies in public spaces in Lucerne, Switzerland.",
         "title": "Visitor Frequencies Lucerne (CH)",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "website": "https://data.stadtluzern.ch"
       },
       "option": {},
       "target": {
@@ -360,6 +360,9 @@
           },
           "name": "go-cli",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },
@@ -410,6 +413,9 @@
           },
           "name": "go-mcp",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },

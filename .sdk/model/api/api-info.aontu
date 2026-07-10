@@ -16,9 +16,9 @@ main: {
           url: "https://data.stadtluzern.ch"
         }
       ]
+      summary: "Live visitor frequencies in public spaces in Lucerne, Switzerland."
       title: "Visitor Frequencies Lucerne (CH)"
       version: "1.0.0"
+      website: "https://data.stadtluzern.ch"
     }
   }
-}
-
