@@ -27,7 +27,20 @@ func main() {
 }
 
 func run(args []string, in io.Reader, out, errOut io.Writer) int {
-	client := sdk.NewVisitorFrequenciesLucerneChSDK(nil)
+	// Configure from the environment: VISITOR_FREQUENCIES_LUCERNE_CH_APIKEY carries the API key and
+	// VISITOR_FREQUENCIES_LUCERNE_CH_BASE optionally overrides the API base URL (e.g. production).
+	// Both injectable by a secrets vault. Unset -> nil config defaults.
+	var opts map[string]any
+	if apikey := os.Getenv("VISITOR_FREQUENCIES_LUCERNE_CH_APIKEY"); apikey != "" {
+		opts = map[string]any{"apikey": apikey}
+	}
+	if base := os.Getenv("VISITOR_FREQUENCIES_LUCERNE_CH_BASE"); base != "" {
+		if opts == nil {
+			opts = map[string]any{}
+		}
+		opts["base"] = base
+	}
+	client := sdk.NewVisitorFrequenciesLucerneChSDK(opts)
 
 	r, err := eng.NewRegistry()
 	if err != nil {
