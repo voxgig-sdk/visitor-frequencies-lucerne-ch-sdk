@@ -1,4 +1,4 @@
--- ProjectName SDK exists test
+-- VisitorFrequenciesLucerneCh SDK exists test
 
 local sdk = require("visitor-frequencies-lucerne-ch_sdk")
 
