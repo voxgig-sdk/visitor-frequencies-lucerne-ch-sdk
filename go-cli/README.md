@@ -12,19 +12,22 @@ at `../go`.
 # 1. Build a native binary (-> dist/<os>-<arch>/visitor-frequencies-lucerne-ch-cli)
 make build
 
-# 2. Provide credentials once, via the environment
+# 2. See usage (words, entities, env vars)
+./visitor-frequencies-lucerne-ch-cli --help
+
+# 3. Provide credentials once, via the environment
 export VISITOR_FREQUENCIES_LUCERNE_CH_APIKEY=sk_live_xxx
 
-# 3. Each command line is ONE AQL expression, run against the API:
+# 4. Each command line is ONE AQL expression, run against the API:
 ./visitor-frequencies-lucerne-ch-cli list search
 
-# 4. Override the API base URL for a single call
+# 5. Override the API base URL for a single call
 VISITOR_FREQUENCIES_LUCERNE_CH_BASE=https://api.example.com ./visitor-frequencies-lucerne-ch-cli list search
 
-# 5. No arguments -> interactive REPL
+# 6. No arguments -> interactive REPL
 ./visitor-frequencies-lucerne-ch-cli
 visitor-frequencies-lucerne-ch> list search
-visitor-frequencies-lucerne-ch> :quit
+visitor-frequencies-lucerne-ch> /quit
 ```
 
 > The rest of this guide follows the [Diátaxis](https://diataxis.fr) framework:
@@ -53,7 +56,7 @@ visitor-frequencies-lucerne-ch> :quit
    ```
 
 4. **Go interactive.** Run the binary with no arguments to open the REPL, then
-   type `:help` for the word and entity lists and `:quit` to leave.
+   type `/help` for the word and entity lists and `/quit` to leave.
 
 That is the whole loop: *build → set key → evaluate AQL expressions*.
 
@@ -88,8 +91,8 @@ evaluated as its own AQL expression:
 ```text
 $ ./visitor-frequencies-lucerne-ch-cli
 visitor-frequencies-lucerne-ch> list search
-visitor-frequencies-lucerne-ch> :help
-visitor-frequencies-lucerne-ch> :quit
+visitor-frequencies-lucerne-ch> /help
+visitor-frequencies-lucerne-ch> /quit
 ```
 
 ### Cross-compile release binaries
@@ -101,7 +104,7 @@ make build-all   # linux/darwin/windows x amd64/arm64, under dist/<os>-<arch>/
 
 ### Discover the available entities
 
-`:help` in the REPL prints the full entity list, or see [Entities](#entities)
+`/help` in the REPL prints the full entity list, or see [Entities](#entities)
 below — this SDK exposes 1 entity.
 
 ## Reference
@@ -127,10 +130,16 @@ The CLI registers these AQL words, each bound to the SDK:
 
 Unset variables fall back to the SDK's built-in defaults.
 
+### CLI flags
+
+- `--help` / `-h` — print usage (words, entities, env vars) and exit.
+
 ### REPL commands
 
-- `:quit` / `:q` / `:exit` — exit the REPL
-- `:help` / `:h` / `:?`     — show the word list, entity list and meta commands
+Meta-commands use the `/` prefix (everything else on a line is evaluated as AQL):
+
+- `/quit` / `/q` / `/exit` — exit the REPL
+- `/help` / `/h` / `/?`     — show the word list, entity list and meta commands
 
 ### Exit codes
 
