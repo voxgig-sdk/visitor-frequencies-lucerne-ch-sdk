@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from visitorfrequencieslucernech_sdk.utility.voxgig_struct import voxgig_struct as vs
 from visitorfrequencieslucernech_sdk import VisitorFrequenciesLucerneChSDK
-from core import helpers
+from visitorfrequencieslucernech_sdk.core import helpers
 from test import runner
 
 
@@ -58,11 +58,11 @@ def _search_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "VISITORFREQUENCIESLUCERNECH_TEST_SEARCH_ENTID": {},
-        "VISITORFREQUENCIESLUCERNECH_TEST_LIVE": "FALSE",
+        "VISITOR_FREQUENCIES_LUCERNE_CH_TEST_SEARCH_ENTID": {},
+        "VISITOR_FREQUENCIES_LUCERNE_CH_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("VISITORFREQUENCIESLUCERNECH_TEST_LIVE") == "TRUE"
+    live = env.get("VISITOR_FREQUENCIES_LUCERNE_CH_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

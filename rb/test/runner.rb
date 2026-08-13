@@ -23,8 +23,8 @@ module VisitorFrequenciesLucerneChTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("VISITORFREQUENCIESLUCERNECH_TEST_LIVE")
-    override = getenv("VISITORFREQUENCIESLUCERNECH_TEST_OVERRIDE")
+    live = getenv("VISITOR_FREQUENCIES_LUCERNE_CH_TEST_LIVE")
+    override = getenv("VISITOR_FREQUENCIES_LUCERNE_CH_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module VisitorFrequenciesLucerneChTestRunner
       end
     end
 
-    explain = getenv("VISITORFREQUENCIESLUCERNECH_TEST_EXPLAIN")
-    m["VISITORFREQUENCIESLUCERNECH_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("VISITOR_FREQUENCIES_LUCERNE_CH_TEST_EXPLAIN")
+    m["VISITOR_FREQUENCIES_LUCERNE_CH_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

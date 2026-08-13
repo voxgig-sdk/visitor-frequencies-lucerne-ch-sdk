@@ -34,7 +34,7 @@ module VisitorFrequenciesLucerneChConfig
             },
             {
               "active" => true,
-              "name" => "field",
+              "name" => "fields",
               "req" => false,
               "type" => "`$OBJECT`",
               "index$" => 1,
@@ -141,6 +141,7 @@ module VisitorFrequenciesLucerneChConfig
                       },
                     ],
                   },
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/api/records/1.0/search/",
                   "parts" => [

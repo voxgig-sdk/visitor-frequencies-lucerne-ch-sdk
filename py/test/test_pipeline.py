@@ -16,11 +16,11 @@
 import pytest
 
 from visitorfrequencieslucernech_sdk import VisitorFrequenciesLucerneChSDK
-from core.error import VisitorFrequenciesLucerneChError
-from core.result import VisitorFrequenciesLucerneChResult
-from core.response import VisitorFrequenciesLucerneChResponse
-from core.spec import VisitorFrequenciesLucerneChSpec
-from feature.base_feature import VisitorFrequenciesLucerneChBaseFeature
+from visitorfrequencieslucernech_sdk.core.error import VisitorFrequenciesLucerneChError
+from visitorfrequencieslucernech_sdk.core.result import VisitorFrequenciesLucerneChResult
+from visitorfrequencieslucernech_sdk.core.response import VisitorFrequenciesLucerneChResponse
+from visitorfrequencieslucernech_sdk.core.spec import VisitorFrequenciesLucerneChSpec
+from visitorfrequencieslucernech_sdk.feature.base_feature import VisitorFrequenciesLucerneChBaseFeature
 
 
 def _client():

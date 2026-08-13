@@ -35,8 +35,8 @@ end
 
 
 function runner.env_override(m)
-  local live = runner.getenv("VISITORFREQUENCIESLUCERNECH_TEST_LIVE")
-  local override = runner.getenv("VISITORFREQUENCIESLUCERNECH_TEST_OVERRIDE")
+  local live = runner.getenv("VISITOR_FREQUENCIES_LUCERNE_CH_TEST_LIVE")
+  local override = runner.getenv("VISITOR_FREQUENCIES_LUCERNE_CH_TEST_OVERRIDE")
 
   if live == "TRUE" or override == "TRUE" then
     for key, _ in pairs(m) do
@@ -56,9 +56,9 @@ function runner.env_override(m)
     end
   end
 
-  local explain = runner.getenv("VISITORFREQUENCIESLUCERNECH_TEST_EXPLAIN")
+  local explain = runner.getenv("VISITOR_FREQUENCIES_LUCERNE_CH_TEST_EXPLAIN")
   if explain ~= nil and explain ~= "" then
-    m["VISITORFREQUENCIESLUCERNECH_TEST_EXPLAIN"] = explain
+    m["VISITOR_FREQUENCIES_LUCERNE_CH_TEST_EXPLAIN"] = explain
   end
 
   return m

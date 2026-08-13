@@ -43,8 +43,8 @@ class VisitorFrequenciesLucerneChTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('VISITORFREQUENCIESLUCERNECH_TEST_LIVE');
-        $override = self::getenv('VISITORFREQUENCIESLUCERNECH_TEST_OVERRIDE');
+        $live = self::getenv('VISITOR_FREQUENCIES_LUCERNE_CH_TEST_LIVE');
+        $override = self::getenv('VISITOR_FREQUENCIES_LUCERNE_CH_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class VisitorFrequenciesLucerneChTestRunner
             }
         }
 
-        $explain = self::getenv('VISITORFREQUENCIESLUCERNECH_TEST_EXPLAIN');
+        $explain = self::getenv('VISITOR_FREQUENCIES_LUCERNE_CH_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['VISITORFREQUENCIESLUCERNECH_TEST_EXPLAIN'] = $explain;
+            $m['VISITOR_FREQUENCIES_LUCERNE_CH_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

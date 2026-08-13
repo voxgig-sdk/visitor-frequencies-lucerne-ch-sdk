@@ -7,7 +7,7 @@
 
 export interface Search {
   datasetid?: string
-  field?: Record<string, any>
+  fields?: Record<string, any>
   geometry?: Record<string, any>
   record_timestamp?: string
   recordid?: string
@@ -15,7 +15,7 @@ export interface Search {
 
 export interface SearchListMatch {
   datasetid?: string
-  field?: Record<string, any>
+  fields?: Record<string, any>
   geometry?: Record<string, any>
   record_timestamp?: string
   recordid?: string

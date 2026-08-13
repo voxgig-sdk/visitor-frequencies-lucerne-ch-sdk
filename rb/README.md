@@ -119,7 +119,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = VisitorFrequenciesLucerneChSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 search = client.Search.list()
 puts search
 ```
@@ -237,7 +238,7 @@ returns a result `Hash` with these keys:
 | Field | Description |
 | --- | --- |
 | `datasetid` |  |
-| `field` |  |
+| `fields` |  |
 | `geometry` |  |
 | `record_timestamp` |  |
 | `recordid` |  |
@@ -266,7 +267,7 @@ Create an instance: `search = client.Search`
 | Field | Type | Description |
 | --- | --- | --- |
 | `datasetid` | `String` |  |
-| `field` | `Hash` |  |
+| `fields` | `Hash` |  |
 | `geometry` | `Hash` |  |
 | `record_timestamp` | `String` |  |
 | `recordid` | `String` |  |

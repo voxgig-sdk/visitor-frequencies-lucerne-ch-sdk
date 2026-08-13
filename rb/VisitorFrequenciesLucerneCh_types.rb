@@ -13,7 +13,7 @@
 # @!attribute [rw] datasetid
 #   @return [String, nil]
 #
-# @!attribute [rw] field
+# @!attribute [rw] fields
 #   @return [Hash, nil]
 #
 # @!attribute [rw] geometry
@@ -26,7 +26,7 @@
 #   @return [String, nil]
 Search = Struct.new(
   :datasetid,
-  :field,
+  :fields,
   :geometry,
   :record_timestamp,
   :recordid,
@@ -38,7 +38,7 @@ Search = Struct.new(
 # @!attribute [rw] datasetid
 #   @return [String, nil]
 #
-# @!attribute [rw] field
+# @!attribute [rw] fields
 #   @return [Hash, nil]
 #
 # @!attribute [rw] geometry
@@ -51,7 +51,7 @@ Search = Struct.new(
 #   @return [String, nil]
 SearchListMatch = Struct.new(
   :datasetid,
-  :field,
+  :fields,
   :geometry,
   :record_timestamp,
   :recordid,

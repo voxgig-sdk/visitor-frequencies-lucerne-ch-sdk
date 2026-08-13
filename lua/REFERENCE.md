@@ -91,7 +91,7 @@ local search = client:Search(nil)
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `datasetid` | `string` | No |  |
-| `field` | `table` | No |  |
+| `fields` | `table` | No |  |
 | `geometry` | `table` | No |  |
 | `record_timestamp` | `string` | No |  |
 | `recordid` | `string` | No |  |

@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import VisitorFrequenciesLucerneChControl
-from core.error import VisitorFrequenciesLucerneChError
-from core.result import VisitorFrequenciesLucerneChResult
-from core.spec import VisitorFrequenciesLucerneChSpec
+from visitorfrequencieslucernech_sdk.config import make_config
+from visitorfrequencieslucernech_sdk.features import _make_feature
+from visitorfrequencieslucernech_sdk.core.control import VisitorFrequenciesLucerneChControl
+from visitorfrequencieslucernech_sdk.core.error import VisitorFrequenciesLucerneChError
+from visitorfrequencieslucernech_sdk.core.result import VisitorFrequenciesLucerneChResult
+from visitorfrequencieslucernech_sdk.core.spec import VisitorFrequenciesLucerneChSpec
 
 
 # True when this SDK was generated with the named feature.

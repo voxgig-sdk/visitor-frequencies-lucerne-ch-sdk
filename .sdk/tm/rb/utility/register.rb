@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ VisitorFrequenciesLucerneChUtility.registrar = ->(u) {
   u.prepare_params = VisitorFrequenciesLucerneChUtilities::PrepareParams
   u.prepare_path = VisitorFrequenciesLucerneChUtilities::PreparePath
   u.prepare_query = VisitorFrequenciesLucerneChUtilities::PrepareQuery
+  u.graphql_body = VisitorFrequenciesLucerneChUtilities::GraphqlBody
+  u.graphql_errors = VisitorFrequenciesLucerneChUtilities::GraphqlErrors
   u.result_basic = VisitorFrequenciesLucerneChUtilities::ResultBasic
   u.result_body = VisitorFrequenciesLucerneChUtilities::ResultBody
   u.result_headers = VisitorFrequenciesLucerneChUtilities::ResultHeaders

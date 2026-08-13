@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# VisitorFrequenciesLucerneCh SDK exists test
 
 import pytest
 from visitorfrequencieslucernech_sdk import VisitorFrequenciesLucerneChSDK
