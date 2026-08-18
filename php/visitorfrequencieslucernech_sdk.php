@@ -40,7 +40,7 @@ class VisitorFrequenciesLucerneChSDK
         $utility = new VisitorFrequenciesLucerneChUtility();
         $this->_utility = $utility;
 
-        $config = VisitorFrequenciesLucerneChConfig::make_config();
+        $config = VisitorFrequenciesLucerneChConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

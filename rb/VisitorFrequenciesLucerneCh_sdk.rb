@@ -28,7 +28,7 @@ class VisitorFrequenciesLucerneChSDK
     utility = VisitorFrequenciesLucerneChUtility.new
     @_utility = utility
 
-    config = VisitorFrequenciesLucerneChConfig.make_config
+    config = VisitorFrequenciesLucerneChConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

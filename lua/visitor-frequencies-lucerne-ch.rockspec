@@ -23,6 +23,7 @@ build = {
   modules = {
     ["visitor-frequencies-lucerne-ch_sdk"] = "visitor-frequencies-lucerne-ch_sdk.lua",
     ["config"] = "config.lua",
+    ["config_shared"] = "config_shared.lua",
     ["features"] = "features.lua",
   }
 }
