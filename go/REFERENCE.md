@@ -98,11 +98,11 @@ fmt.Println(search.GetName()) // "search"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `datasetid` | `string` | No |  |
-| `fields` | `map[string]any` | No |  |
-| `geometry` | `map[string]any` | No |  |
-| `record_timestamp` | `string` | No |  |
-| `recordid` | `string` | No |  |
+| `datasetid` | `string` | No | Dataset identifier |
+| `fields` | `map[string]any` | No | Record data fields |
+| `geometry` | `map[string]any` | No | GeoJSON geometry object |
+| `record_timestamp` | `string` | No | Record creation timestamp |
+| `recordid` | `string` | No | Unique record identifier |
 
 ### Operations
 

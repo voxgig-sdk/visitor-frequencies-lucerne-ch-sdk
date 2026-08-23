@@ -93,11 +93,11 @@ search = client.Search
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `datasetid` | `String` | No |  |
-| `fields` | `Hash` | No |  |
-| `geometry` | `Hash` | No |  |
-| `record_timestamp` | `String` | No |  |
-| `recordid` | `String` | No |  |
+| `datasetid` | `String` | No | Dataset identifier |
+| `fields` | `Hash` | No | Record data fields |
+| `geometry` | `Hash` | No | GeoJSON geometry object |
+| `record_timestamp` | `String` | No | Record creation timestamp |
+| `recordid` | `String` | No | Unique record identifier |
 
 ### Operations
 

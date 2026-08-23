@@ -231,11 +231,11 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `datasetid` |  |
-| `fields` |  |
-| `geometry` |  |
-| `record_timestamp` |  |
-| `recordid` |  |
+| `datasetid` | Dataset identifier |
+| `fields` | Record data fields |
+| `geometry` | GeoJSON geometry object |
+| `record_timestamp` | Record creation timestamp |
+| `recordid` | Unique record identifier |
 
 Operations: List.
 
@@ -260,11 +260,11 @@ Create an instance: `local search = client:Search(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `datasetid` | `string` |  |
-| `fields` | `table` |  |
-| `geometry` | `table` |  |
-| `record_timestamp` | `string` |  |
-| `recordid` | `string` |  |
+| `datasetid` | `string` | Dataset identifier |
+| `fields` | `table` | Record data fields |
+| `geometry` | `table` | GeoJSON geometry object |
+| `record_timestamp` | `string` | Record creation timestamp |
+| `recordid` | `string` | Unique record identifier |
 
 #### Example: List
 

@@ -243,11 +243,11 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `datasetid` |  |
-| `fields` |  |
-| `geometry` |  |
-| `record_timestamp` |  |
-| `recordid` |  |
+| `datasetid` | Dataset identifier |
+| `fields` | Record data fields |
+| `geometry` | GeoJSON geometry object |
+| `record_timestamp` | Record creation timestamp |
+| `recordid` | Unique record identifier |
 
 Operations: List.
 
@@ -272,11 +272,11 @@ Create an instance: `search = client.Search()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `datasetid` | `str` |  |
-| `fields` | `dict` |  |
-| `geometry` | `dict` |  |
-| `record_timestamp` | `str` |  |
-| `recordid` | `str` |  |
+| `datasetid` | `str` | Dataset identifier |
+| `fields` | `dict` | Record data fields |
+| `geometry` | `dict` | GeoJSON geometry object |
+| `record_timestamp` | `str` | Record creation timestamp |
+| `recordid` | `str` | Unique record identifier |
 
 #### Example: List
 

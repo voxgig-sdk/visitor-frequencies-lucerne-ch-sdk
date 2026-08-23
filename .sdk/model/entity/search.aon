@@ -8,26 +8,31 @@ main: kit: entity: search: {
     {
       name: "datasetid"
       req: false
+      short: "Dataset identifier"
       type: "`$STRING`"
     }
     {
       name: "fields"
       req: false
+      short: "Record data fields"
       type: "`$OBJECT`"
     }
     {
       name: "geometry"
       req: false
+      short: "GeoJSON geometry object"
       type: "`$OBJECT`"
     }
     {
       name: "record_timestamp"
       req: false
+      short: "Record creation timestamp"
       type: "`$STRING`"
     }
     {
       name: "recordid"
       req: false
+      short: "Unique record identifier"
       type: "`$STRING`"
     }
   ]

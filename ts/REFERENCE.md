@@ -116,11 +116,11 @@ const search = client.Search()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `datasetid` | `string` | No |  |
-| `fields` | `Record<string, any>` | No |  |
-| `geometry` | `Record<string, any>` | No |  |
-| `record_timestamp` | `string` | No |  |
-| `recordid` | `string` | No |  |
+| `datasetid` | `string` | No | Dataset identifier |
+| `fields` | `Record<string, any>` | No | Record data fields |
+| `geometry` | `Record<string, any>` | No | GeoJSON geometry object |
+| `record_timestamp` | `string` | No | Record creation timestamp |
+| `recordid` | `string` | No | Unique record identifier |
 
 ### Operations
 

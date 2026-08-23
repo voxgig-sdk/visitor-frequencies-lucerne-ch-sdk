@@ -87,11 +87,11 @@ search = client.Search()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `datasetid` | `str` | No |  |
-| `fields` | `dict` | No |  |
-| `geometry` | `dict` | No |  |
-| `record_timestamp` | `str` | No |  |
-| `recordid` | `str` | No |  |
+| `datasetid` | `str` | No | Dataset identifier |
+| `fields` | `dict` | No | Record data fields |
+| `geometry` | `dict` | No | GeoJSON geometry object |
+| `record_timestamp` | `str` | No | Record creation timestamp |
+| `recordid` | `str` | No | Unique record identifier |
 
 ### Operations
 

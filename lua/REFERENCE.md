@@ -90,11 +90,11 @@ local search = client:Search(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `datasetid` | `string` | No |  |
-| `fields` | `table` | No |  |
-| `geometry` | `table` | No |  |
-| `record_timestamp` | `string` | No |  |
-| `recordid` | `string` | No |  |
+| `datasetid` | `string` | No | Dataset identifier |
+| `fields` | `table` | No | Record data fields |
+| `geometry` | `table` | No | GeoJSON geometry object |
+| `record_timestamp` | `string` | No | Record creation timestamp |
+| `recordid` | `string` | No | Unique record identifier |
 
 ### Operations
 

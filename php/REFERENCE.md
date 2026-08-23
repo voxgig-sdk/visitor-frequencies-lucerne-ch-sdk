@@ -92,11 +92,11 @@ $search = $client->Search();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `datasetid` | `string` | No |  |
-| `fields` | `array` | No |  |
-| `geometry` | `array` | No |  |
-| `record_timestamp` | `string` | No |  |
-| `recordid` | `string` | No |  |
+| `datasetid` | `string` | No | Dataset identifier |
+| `fields` | `array` | No | Record data fields |
+| `geometry` | `array` | No | GeoJSON geometry object |
+| `record_timestamp` | `string` | No | Record creation timestamp |
+| `recordid` | `string` | No | Unique record identifier |
 
 ### Operations
 

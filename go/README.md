@@ -6,7 +6,7 @@ The Golang SDK for the VisitorFrequenciesLucerneCh API — an entity-oriented cl
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.Search(nil)` — each with the same small set of operations (`List`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -260,11 +260,11 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"datasetid"` |  |
-| `"fields"` |  |
-| `"geometry"` |  |
-| `"record_timestamp"` |  |
-| `"recordid"` |  |
+| `"datasetid"` | Dataset identifier |
+| `"fields"` | Record data fields |
+| `"geometry"` | GeoJSON geometry object |
+| `"record_timestamp"` | Record creation timestamp |
+| `"recordid"` | Unique record identifier |
 
 Operations: List.
 
@@ -289,11 +289,11 @@ Create an instance: `search := client.Search(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `datasetid` | `string` |  |
-| `fields` | `map[string]any` |  |
-| `geometry` | `map[string]any` |  |
-| `record_timestamp` | `string` |  |
-| `recordid` | `string` |  |
+| `datasetid` | `string` | Dataset identifier |
+| `fields` | `map[string]any` | Record data fields |
+| `geometry` | `map[string]any` | GeoJSON geometry object |
+| `record_timestamp` | `string` | Record creation timestamp |
+| `recordid` | `string` | Unique record identifier |
 
 #### Example: List
 

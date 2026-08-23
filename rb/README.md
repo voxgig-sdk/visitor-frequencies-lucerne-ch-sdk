@@ -237,11 +237,11 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `datasetid` |  |
-| `fields` |  |
-| `geometry` |  |
-| `record_timestamp` |  |
-| `recordid` |  |
+| `datasetid` | Dataset identifier |
+| `fields` | Record data fields |
+| `geometry` | GeoJSON geometry object |
+| `record_timestamp` | Record creation timestamp |
+| `recordid` | Unique record identifier |
 
 Operations: List.
 
@@ -266,11 +266,11 @@ Create an instance: `search = client.Search`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `datasetid` | `String` |  |
-| `fields` | `Hash` |  |
-| `geometry` | `Hash` |  |
-| `record_timestamp` | `String` |  |
-| `recordid` | `String` |  |
+| `datasetid` | `String` | Dataset identifier |
+| `fields` | `Hash` | Record data fields |
+| `geometry` | `Hash` | GeoJSON geometry object |
+| `record_timestamp` | `String` | Record creation timestamp |
+| `recordid` | `String` | Unique record identifier |
 
 #### Example: List
 

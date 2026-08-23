@@ -7,6 +7,9 @@ local function make_config()
   return {
     main = {
       name = "VisitorFrequenciesLucerneCh",
+      slug = "visitor-frequencies-lucerne-ch",
+      version = "0.0.1",
+      target = "lua",
     },
     feature = {
       ["test"] = {
@@ -29,22 +32,27 @@ local function make_config()
         ["fields"] = {
           {
             ["name"] = "datasetid",
+            ["short"] = "Dataset identifier",
             ["type"] = "`$STRING`",
           },
           {
             ["name"] = "fields",
+            ["short"] = "Record data fields",
             ["type"] = "`$OBJECT`",
           },
           {
             ["name"] = "geometry",
+            ["short"] = "GeoJSON geometry object",
             ["type"] = "`$OBJECT`",
           },
           {
             ["name"] = "record_timestamp",
+            ["short"] = "Record creation timestamp",
             ["type"] = "`$STRING`",
           },
           {
             ["name"] = "recordid",
+            ["short"] = "Unique record identifier",
             ["type"] = "`$STRING`",
           },
         },

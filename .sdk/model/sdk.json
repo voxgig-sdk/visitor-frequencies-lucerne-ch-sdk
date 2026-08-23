@@ -36,30 +36,35 @@
               "active": true,
               "name": "datasetid",
               "req": false,
+              "short": "Dataset identifier",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "fields",
               "req": false,
+              "short": "Record data fields",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "geometry",
               "req": false,
+              "short": "GeoJSON geometry object",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "record_timestamp",
               "req": false,
+              "short": "Record creation timestamp",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "recordid",
               "req": false,
+              "short": "Unique record identifier",
               "type": "`$STRING`"
             }
           ],

@@ -247,11 +247,11 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `datasetid` |  |
-| `fields` |  |
-| `geometry` |  |
-| `record_timestamp` |  |
-| `recordid` |  |
+| `datasetid` | Dataset identifier |
+| `fields` | Record data fields |
+| `geometry` | GeoJSON geometry object |
+| `record_timestamp` | Record creation timestamp |
+| `recordid` | Unique record identifier |
 
 Operations: List.
 
@@ -276,11 +276,11 @@ Create an instance: `$search = $client->Search();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `datasetid` | `string` |  |
-| `fields` | `array` |  |
-| `geometry` | `array` |  |
-| `record_timestamp` | `string` |  |
-| `recordid` | `string` |  |
+| `datasetid` | `string` | Dataset identifier |
+| `fields` | `array` | Record data fields |
+| `geometry` | `array` | GeoJSON geometry object |
+| `record_timestamp` | `string` | Record creation timestamp |
+| `recordid` | `string` | Unique record identifier |
 
 #### Example: List
 
