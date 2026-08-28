@@ -14,10 +14,13 @@ export interface Search {
 }
 
 export interface SearchListMatch {
-  datasetid?: string
-  fields?: Record<string, any>
-  geometry?: Record<string, any>
-  record_timestamp?: string
-  recordid?: string
+  dataset: string
+  exclude?: string
+  format?: string
+  q?: string
+  refine?: string
+  row?: number
+  sort?: string
+  start?: number
 }
 

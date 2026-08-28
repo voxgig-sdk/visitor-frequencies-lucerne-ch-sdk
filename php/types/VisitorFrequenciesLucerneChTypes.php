@@ -25,10 +25,13 @@ class Search
 /** Request payload for Search#list. */
 class SearchListMatch
 {
-    public ?string $datasetid = null;
-    public ?array $fields = null;
-    public ?array $geometry = null;
-    public ?string $record_timestamp = null;
-    public ?string $recordid = null;
+    public string $dataset;
+    public ?string $exclude = null;
+    public ?string $format = null;
+    public ?string $q = null;
+    public ?string $refine = null;
+    public ?int $row = null;
+    public ?string $sort = null;
+    public ?int $start = null;
 }
 

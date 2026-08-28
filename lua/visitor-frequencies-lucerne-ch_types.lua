@@ -14,11 +14,14 @@
 ---@field recordid? string
 
 ---@class SearchListMatch
----@field datasetid? string
----@field fields? table
----@field geometry? table
----@field record_timestamp? string
----@field recordid? string
+---@field dataset string
+---@field exclude? string
+---@field format? string
+---@field q? string
+---@field refine? string
+---@field row? number
+---@field sort? string
+---@field start? number
 
 local M = {}
 

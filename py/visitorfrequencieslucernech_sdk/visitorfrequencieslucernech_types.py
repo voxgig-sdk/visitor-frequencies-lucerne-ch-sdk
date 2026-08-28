@@ -24,9 +24,15 @@ class Search(TypedDict, total=False):
     recordid: str
 
 
-class SearchListMatch(TypedDict, total=False):
-    datasetid: str
-    fields: dict
-    geometry: dict
-    record_timestamp: str
-    recordid: str
+class SearchListMatchRequired(TypedDict):
+    dataset: str
+
+
+class SearchListMatch(SearchListMatchRequired, total=False):
+    exclude: str
+    format: str
+    q: str
+    refine: str
+    row: int
+    sort: str
+    start: int
