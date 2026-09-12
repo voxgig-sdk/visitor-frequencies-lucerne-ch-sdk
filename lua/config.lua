@@ -47,6 +47,7 @@ local function make_config()
             ["type"] = "`$OBJECT`",
           },
           {
+            ["format"] = "date-time",
             ["name"] = "record_timestamp",
             ["short"] = "Record creation timestamp",
             ["type"] = "`$STRING`",
@@ -124,11 +125,19 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/api/records/1.0/search/",
-                ["parts"] = {
-                  "api",
-                  "records",
-                  "1.0",
-                  "search",
+                ["segments"] = {
+                  {
+                    ["lit"] = "api",
+                  },
+                  {
+                    ["lit"] = "records",
+                  },
+                  {
+                    ["lit"] = "1.0",
+                  },
+                  {
+                    ["lit"] = "search",
+                  },
                 },
                 ["select"] = {
                   ["exist"] = {
@@ -145,6 +154,12 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "api",
+                  "records",
+                  "1.0",
+                  "search",
                 },
               },
             },
