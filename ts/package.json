@@ -1,5 +1,5 @@
 {
-  "name": "@voxgig-sdk/visitor-frequencies-lucerne-ch",
+  "name": "@voxgig-sdk/visitor-frequencies-lucerne-ch-sdk",
   "version": "0.0.1",
   "description": "Unofficial generated TypeScript SDK for the Visitor Frequencies Lucerne (CH) public API. Not affiliated with or endorsed by the upstream API provider.",
   "keywords": [

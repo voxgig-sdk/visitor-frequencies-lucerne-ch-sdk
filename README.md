@@ -105,7 +105,7 @@ local results, err = client:Search():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
+| TypeScript | `@voxgig-sdk/visitor-frequencies-lucerne-ch-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
 | Python | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
 | PHP | `voxgig-sdk/visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go` | `go get github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Search():list()
 ### TypeScript
 
 ```ts
-import { VisitorFrequenciesLucerneChSDK } from '@voxgig-sdk/visitor-frequencies-lucerne-ch'
+import { VisitorFrequenciesLucerneChSDK } from '@voxgig-sdk/visitor-frequencies-lucerne-ch-sdk'
 
 const client = new VisitorFrequenciesLucerneChSDK()
 

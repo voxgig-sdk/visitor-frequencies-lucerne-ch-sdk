@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { VisitorFrequenciesLucerneChSDK } from '@voxgig-sdk/visitor-frequencies-lucerne-ch'
+import { VisitorFrequenciesLucerneChSDK } from '@voxgig-sdk/visitor-frequencies-lucerne-ch-sdk'
 
 const client = new VisitorFrequenciesLucerneChSDK()
 ```
@@ -411,7 +411,7 @@ visitor-frequencies-lucerne-ch/
 Import the SDK from the package root:
 
 ```ts
-import { VisitorFrequenciesLucerneChSDK } from '@voxgig-sdk/visitor-frequencies-lucerne-ch'
+import { VisitorFrequenciesLucerneChSDK } from '@voxgig-sdk/visitor-frequencies-lucerne-ch-sdk'
 ```
 
 ### Entity state
