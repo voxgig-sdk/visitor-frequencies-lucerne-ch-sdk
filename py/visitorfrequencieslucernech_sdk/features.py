@@ -1,12 +1,18 @@
 # VisitorFrequenciesLucerneCh SDK feature factory
 
 from visitorfrequencieslucernech_sdk.feature.base_feature import VisitorFrequenciesLucerneChBaseFeature
+from visitorfrequencieslucernech_sdk.feature.ratelimit_feature import VisitorFrequenciesLucerneChRatelimitFeature
+from visitorfrequencieslucernech_sdk.feature.retry_feature import VisitorFrequenciesLucerneChRetryFeature
 from visitorfrequencieslucernech_sdk.feature.test_feature import VisitorFrequenciesLucerneChTestFeature
+from visitorfrequencieslucernech_sdk.feature.timeout_feature import VisitorFrequenciesLucerneChTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: VisitorFrequenciesLucerneChBaseFeature(),
+    "ratelimit": lambda: VisitorFrequenciesLucerneChRatelimitFeature(),
+    "retry": lambda: VisitorFrequenciesLucerneChRetryFeature(),
     "test": lambda: VisitorFrequenciesLucerneChTestFeature(),
+    "timeout": lambda: VisitorFrequenciesLucerneChTimeoutFeature(),
 }
 
 

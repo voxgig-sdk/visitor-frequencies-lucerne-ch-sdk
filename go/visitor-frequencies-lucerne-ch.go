@@ -29,8 +29,17 @@ func init() {
 	core.NewBaseFeatureFunc = func() core.Feature {
 		return feature.NewBaseFeature()
 	}
+	core.NewRatelimitFeatureFunc = func() core.Feature {
+		return feature.NewRatelimitFeature()
+	}
+	core.NewRetryFeatureFunc = func() core.Feature {
+		return feature.NewRetryFeature()
+	}
 	core.NewTestFeatureFunc = func() core.Feature {
 		return feature.NewTestFeature()
+	}
+	core.NewTimeoutFeatureFunc = func() core.Feature {
+		return feature.NewTimeoutFeature()
 	}
 	core.NewSearchEntityFunc = func(client *core.VisitorFrequenciesLucerneChSDK, entopts map[string]any) core.VisitorFrequenciesLucerneChEntity {
 		return entity.NewSearchEntity(client, entopts)
@@ -55,4 +64,7 @@ var SharedConfig = core.SharedConfig
 func New() *VisitorFrequenciesLucerneChSDK  { return NewVisitorFrequenciesLucerneChSDK(nil) }
 func Test() *VisitorFrequenciesLucerneChSDK { return TestSDK(nil, nil) }
 var NewBaseFeature = feature.NewBaseFeature
+var NewRatelimitFeature = feature.NewRatelimitFeature
+var NewRetryFeature = feature.NewRetryFeature
 var NewTestFeature = feature.NewTestFeature
+var NewTimeoutFeature = feature.NewTimeoutFeature

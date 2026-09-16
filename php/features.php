@@ -4,7 +4,10 @@ declare(strict_types=1);
 // VisitorFrequenciesLucerneCh SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class VisitorFrequenciesLucerneChFeatures
@@ -14,8 +17,14 @@ class VisitorFrequenciesLucerneChFeatures
         switch ($name) {
             case "base":
                 return new VisitorFrequenciesLucerneChBaseFeature();
+            case "ratelimit":
+                return new VisitorFrequenciesLucerneChRatelimitFeature();
+            case "retry":
+                return new VisitorFrequenciesLucerneChRetryFeature();
             case "test":
                 return new VisitorFrequenciesLucerneChTestFeature();
+            case "timeout":
+                return new VisitorFrequenciesLucerneChTimeoutFeature();
             default:
                 return new VisitorFrequenciesLucerneChBaseFeature();
         }
@@ -31,7 +40,10 @@ class VisitorFrequenciesLucerneChFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;
