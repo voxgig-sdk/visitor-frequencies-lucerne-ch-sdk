@@ -105,12 +105,12 @@ local results, err = client:Search():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/visitor-frequencies-lucerne-ch-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
-| Python | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
-| PHP | `voxgig-sdk/visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
+| TypeScript | `@voxgig-sdk/visitor-frequencies-lucerne-ch-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
+| Python | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
+| PHP | `voxgig-sdk/visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go` | `go get github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go@latest` |
-| Ruby | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
-| Lua | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases) |
+| Ruby | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
+| Lua | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go-cli` | `go install github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go-cli/cmd/visitor-frequencies-lucerne-ch@latest` |
 | Go MCP server | `github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go-mcp` | `go get github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go-mcp@latest` |
 
