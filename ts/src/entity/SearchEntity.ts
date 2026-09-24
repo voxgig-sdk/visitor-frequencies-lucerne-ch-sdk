@@ -19,7 +19,6 @@ import type {
   SearchListMatch,
 } from '../VisitorFrequenciesLucerneChTypes'
 
-// TODO: needs Entity superclass
 class SearchEntity extends VisitorFrequenciesLucerneChEntityBase<Search> {
 
   constructor(client: VisitorFrequenciesLucerneChSDK, entopts: any) {

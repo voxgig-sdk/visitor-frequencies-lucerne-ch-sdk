@@ -1,0 +1,160 @@
+# Entity: search
+
+main: kit: entity: search: {
+
+  alias: field: {}
+
+  fields: {
+    datasetid: {
+      h: "Datasetid"
+      n: "datasetid"
+      r: false
+      sh: "Dataset identifier"
+      t: "`$STRING`"
+    }
+    fields: {
+      h: "Fields"
+      n: "fields"
+      r: false
+      sh: "Record data fields"
+      t: "`$OBJECT`"
+    }
+    geometry: {
+      h: "Geometry"
+      n: "geometry"
+      r: false
+      sh: "GeoJSON geometry object"
+      t: "`$OBJECT`"
+    }
+    record_timestamp: {
+      fo: "date-time"
+      h: "Record Timestamp"
+      n: "record_timestamp"
+      r: false
+      sh: "Record creation timestamp"
+      t: "`$STRING`"
+    }
+    recordid: {
+      h: "Recordid"
+      n: "recordid"
+      r: false
+      sh: "Unique record identifier"
+      t: "`$STRING`"
+    }
+  }
+
+  name: "search"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/records/1.0/search/"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "besucherfrequenzen-im-offentlichen-raum"
+                k: "query"
+                n: "dataset"
+                or: "dataset"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "exclude"
+                or: "exclude"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "json"
+                k: "query"
+                n: "format"
+                or: "format"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "q"
+                or: "q"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "refine"
+                or: "refine"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 10
+                k: "query"
+                n: "row"
+                or: "row"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "sort"
+                or: "sort"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "start"
+                or: "start"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/records/1.0/search/"
+          q: {
+            exist: [
+              "dataset"
+              "exclude"
+              "format"
+              "q"
+              "refine"
+              "row"
+              "sort"
+              "start"
+            ]
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "records"
+            }
+            {
+              lit: "1.0"
+            }
+            {
+              lit: "search"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

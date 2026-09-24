@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SearchEntity = void 0;
 const VisitorFrequenciesLucerneChEntityBase_1 = require("../VisitorFrequenciesLucerneChEntityBase");
-// TODO: needs Entity superclass
 class SearchEntity extends VisitorFrequenciesLucerneChEntityBase_1.VisitorFrequenciesLucerneChEntityBase {
     constructor(client, entopts) {
         super(client, entopts);

@@ -16,12 +16,6 @@ const FEATURE_CLASS: Record<string, typeof BaseFeature> = {
 }
 
 
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS: Record<string, any[]> = {
   
 }
@@ -32,7 +26,6 @@ class Config {
   makeFeature(this: any, fn: string) {
     const fc = FEATURE_CLASS[fn]
     const fi = new fc()
-    // TODO: errors etc
     return fi
   }
 
@@ -139,29 +132,34 @@ class Config {
       "fields": [
         {
           "name": "datasetid",
-          "short": "Dataset identifier",
-          "type": "`$STRING`"
+          "title": "Datasetid",
+          "type": "`$STRING`",
+          "short": "Dataset identifier"
         },
         {
           "name": "fields",
-          "short": "Record data fields",
-          "type": "`$OBJECT`"
+          "title": "Fields",
+          "type": "`$OBJECT`",
+          "short": "Record data fields"
         },
         {
           "name": "geometry",
-          "short": "GeoJSON geometry object",
-          "type": "`$OBJECT`"
+          "title": "Geometry",
+          "type": "`$OBJECT`",
+          "short": "GeoJSON geometry object"
         },
         {
-          "format": "date-time",
           "name": "record_timestamp",
+          "title": "Record Timestamp",
+          "type": "`$STRING`",
           "short": "Record creation timestamp",
-          "type": "`$STRING`"
+          "format": "date-time"
         },
         {
           "name": "recordid",
-          "short": "Unique record identifier",
-          "type": "`$STRING`"
+          "title": "Recordid",
+          "type": "`$STRING`",
+          "short": "Unique record identifier"
         }
       ],
       "name": "search",
@@ -171,63 +169,6 @@ class Config {
           "name": "list",
           "points": [
             {
-              "args": {
-                "query": [
-                  {
-                    "example": "besucherfrequenzen-im-offentlichen-raum",
-                    "kind": "query",
-                    "name": "dataset",
-                    "orig": "dataset",
-                    "reqd": true,
-                    "type": "`$STRING`"
-                  },
-                  {
-                    "kind": "query",
-                    "name": "exclude",
-                    "orig": "exclude",
-                    "type": "`$STRING`"
-                  },
-                  {
-                    "example": "json",
-                    "kind": "query",
-                    "name": "format",
-                    "orig": "format",
-                    "type": "`$STRING`"
-                  },
-                  {
-                    "kind": "query",
-                    "name": "q",
-                    "orig": "q",
-                    "type": "`$STRING`"
-                  },
-                  {
-                    "kind": "query",
-                    "name": "refine",
-                    "orig": "refine",
-                    "type": "`$STRING`"
-                  },
-                  {
-                    "example": 10,
-                    "kind": "query",
-                    "name": "row",
-                    "orig": "row",
-                    "type": "`$INTEGER`"
-                  },
-                  {
-                    "kind": "query",
-                    "name": "sort",
-                    "orig": "sort",
-                    "type": "`$STRING`"
-                  },
-                  {
-                    "example": 0,
-                    "kind": "query",
-                    "name": "start",
-                    "orig": "start",
-                    "type": "`$INTEGER`"
-                  }
-                ]
-              },
               "kind": "http",
               "method": "GET",
               "orig": "/api/records/1.0/search/",
@@ -245,6 +186,74 @@ class Config {
                   "lit": "search"
                 }
               ],
+              "parts": [
+                "api",
+                "records",
+                "1.0",
+                "search"
+              ],
+              "rename": {},
+              "transform": {
+                "req": "`reqdata`",
+                "res": "`body`"
+              },
+              "args": {
+                "query": [
+                  {
+                    "name": "dataset",
+                    "orig": "dataset",
+                    "type": "`$STRING`",
+                    "kind": "query",
+                    "reqd": true,
+                    "example": "besucherfrequenzen-im-offentlichen-raum"
+                  },
+                  {
+                    "name": "exclude",
+                    "orig": "exclude",
+                    "type": "`$STRING`",
+                    "kind": "query"
+                  },
+                  {
+                    "name": "format",
+                    "orig": "format",
+                    "type": "`$STRING`",
+                    "kind": "query",
+                    "example": "json"
+                  },
+                  {
+                    "name": "q",
+                    "orig": "q",
+                    "type": "`$STRING`",
+                    "kind": "query"
+                  },
+                  {
+                    "name": "refine",
+                    "orig": "refine",
+                    "type": "`$STRING`",
+                    "kind": "query"
+                  },
+                  {
+                    "name": "row",
+                    "orig": "row",
+                    "type": "`$INTEGER`",
+                    "kind": "query",
+                    "example": 10
+                  },
+                  {
+                    "name": "sort",
+                    "orig": "sort",
+                    "type": "`$STRING`",
+                    "kind": "query"
+                  },
+                  {
+                    "name": "start",
+                    "orig": "start",
+                    "type": "`$INTEGER`",
+                    "kind": "query",
+                    "example": 0
+                  }
+                ]
+              },
               "select": {
                 "exist": [
                   "dataset",
@@ -256,17 +265,7 @@ class Config {
                   "sort",
                   "start"
                 ]
-              },
-              "transform": {
-                "req": "`reqdata`",
-                "res": "`body`"
-              },
-              "parts": [
-                "api",
-                "records",
-                "1.0",
-                "search"
-              ]
+              }
             }
           ]
         }
