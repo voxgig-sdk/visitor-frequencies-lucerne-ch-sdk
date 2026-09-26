@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "voxgig-sdk-visitor-frequencies-lucerne-ch"
+name = "voxgig-sdk-visitor-frequencies-lucerne-ch-sdk"
 version = "0.0.1"
 description = "Unofficial generated Python SDK for the Visitor Frequencies Lucerne (CH) public API. Not affiliated with or endorsed by the upstream API provider."
 readme = "README.md"

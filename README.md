@@ -106,11 +106,11 @@ local results, err = client:Search():list()
 | Language | Package | Install |
 | --- | --- | --- |
 | TypeScript | `@voxgig-sdk/visitor-frequencies-lucerne-ch-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
-| Python | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
-| PHP | `voxgig-sdk/visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
+| Python | `voxgig-sdk-visitor-frequencies-lucerne-ch-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
+| PHP | `voxgig-sdk/visitor-frequencies-lucerne-ch-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go` | `go get github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go@latest` |
-| Ruby | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
-| Lua | `voxgig-sdk-visitor-frequencies-lucerne-ch` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
+| Ruby | `voxgig-sdk-visitor-frequencies-lucerne-ch-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
+| Lua | `voxgig-sdk-visitor-frequencies-lucerne-ch-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go-cli` | `go install github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go-cli/cmd/visitor-frequencies-lucerne-ch@latest` |
 | Go MCP server | `github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go-mcp` | `go get github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/go-mcp@latest` |
 
@@ -339,10 +339,10 @@ forking the SDK.
 
 | Feature | Purpose |
 | --- | --- |
-| **RatelimitFeature** | Client-side rate limiting via a token bucket |
-| **RetryFeature** | Automatic retry of transient failures with exponential backoff |
-| **TestFeature** | In-memory mock transport for testing without a live server |
-| **TimeoutFeature** | Per-request timeout with transport abort |
+| **RatelimitFeature** | Rate limiting |
+| **RetryFeature** | Retry |
+| **TestFeature** | Test transport |
+| **TimeoutFeature** | Timeout |
 
 Pass custom features via the `extend` option at construction time.
 

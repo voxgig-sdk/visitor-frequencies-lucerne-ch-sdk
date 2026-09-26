@@ -1,5 +1,5 @@
 {
-  "name": "voxgig-sdk/visitor-frequencies-lucerne-ch",
+  "name": "voxgig-sdk/visitor-frequencies-lucerne-ch-sdk",
   "description": "Unofficial generated PHP SDK for the Visitor Frequencies Lucerne (CH) public API. Not affiliated with or endorsed by the upstream API provider.",
   "type": "library",
   "keywords": ["voxgig", "sdk", "generated-sdk", "openapi", "api-client", "visitor-frequencies-lucerne-ch"],
