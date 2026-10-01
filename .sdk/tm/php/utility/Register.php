@@ -37,6 +37,8 @@ require_once __DIR__ . '/TransformResponse.php';
 
 VisitorFrequenciesLucerneChUtility::setRegistrar(function (VisitorFrequenciesLucerneChUtility $u): void {
     $u->clean = [VisitorFrequenciesLucerneChClean::class, 'call'];
+    $u->clean_add = [VisitorFrequenciesLucerneChClean::class, 'add'];
+    $u->clean_explain = [VisitorFrequenciesLucerneChDone::class, 'clean_explain'];
     $u->done = [VisitorFrequenciesLucerneChDone::class, 'call'];
     $u->make_error = [VisitorFrequenciesLucerneChMakeError::class, 'call'];
     $u->feature_add = [VisitorFrequenciesLucerneChFeatureAdd::class, 'call'];

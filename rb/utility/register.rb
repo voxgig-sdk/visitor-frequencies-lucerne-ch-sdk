@@ -33,6 +33,8 @@ require_relative 'transform_response'
 
 VisitorFrequenciesLucerneChUtility.registrar = ->(u) {
   u.clean = VisitorFrequenciesLucerneChUtilities::Clean
+  u.clean_add = VisitorFrequenciesLucerneChUtilities::CleanAdd
+  u.clean_explain = VisitorFrequenciesLucerneChUtilities::CleanExplain
   u.done = VisitorFrequenciesLucerneChUtilities::Done
   u.make_error = VisitorFrequenciesLucerneChUtilities::MakeError
   u.feature_add = VisitorFrequenciesLucerneChUtilities::FeatureAdd

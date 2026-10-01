@@ -12,9 +12,14 @@ The SDK exposes the API as capitalised, semantic **Entities** — for example `$
 
 ## Install
 This package is not yet published to Packagist. Install it from the
-GitHub release tag (`php/vX.Y.Z`):
+GitHub release tag (`php/vX.Y.Z`, see [Releases](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases)), or
+from a clone as a Composer path repository:
 
-- Releases: [https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases](https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk/releases)
+```bash
+git clone https://github.com/voxgig-sdk/visitor-frequencies-lucerne-ch-sdk
+composer config repositories.visitor-frequencies-lucerne-ch-sdk path ./visitor-frequencies-lucerne-ch-sdk/php
+composer require voxgig-sdk/visitor-frequencies-lucerne-ch-sdk:@dev
+```
 
 
 ## Tutorial: your first API call

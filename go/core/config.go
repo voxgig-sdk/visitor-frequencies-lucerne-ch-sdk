@@ -193,7 +193,7 @@ func MakeConfig() map[string]any {
 										},
 										map[string]any{
 											"name": "row",
-											"orig": "row",
+											"orig": "rows",
 											"type": "`$INTEGER`",
 											"kind": "query",
 											"example": 10,

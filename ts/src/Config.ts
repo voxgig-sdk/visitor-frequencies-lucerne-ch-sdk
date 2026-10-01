@@ -234,7 +234,7 @@ class Config {
                   },
                   {
                     "name": "row",
-                    "orig": "row",
+                    "orig": "rows",
                     "type": "`$INTEGER`",
                     "kind": "query",
                     "example": 10

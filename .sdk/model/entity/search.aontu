@@ -97,7 +97,7 @@ main: kit: entity: search: {
                 ex: 10
                 k: "query"
                 n: "row"
-                or: "row"
+                or: "rows"
                 r: false
                 t: "`$INTEGER`"
               }
