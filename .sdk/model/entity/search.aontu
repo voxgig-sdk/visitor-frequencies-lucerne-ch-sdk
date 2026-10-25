@@ -123,14 +123,11 @@ main: kit: entity: search: {
           q: {
             exist: [
               "dataset"
-              "exclude"
-              "format"
-              "q"
-              "refine"
-              "row"
-              "sort"
-              "start"
             ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
           }
           s: [
             {

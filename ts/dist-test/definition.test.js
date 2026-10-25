@@ -18,14 +18,18 @@ const PLAN = [
         "select": {
             "dataset": "v1",
             "exclude": "v1",
-            "format": "v1",
+            "format": "json",
             "q": "v1",
             "refine": "v1",
-            "row": "v1",
+            "row": 10,
             "sort": "v1",
-            "start": "v1"
+            "start": 0
         },
         "headers": [],
+        "cookies": [],
+        "responseMedia": [
+            "application/json"
+        ],
         "query": [
             "dataset",
             "rows",
@@ -36,30 +40,64 @@ const PLAN = [
             "exclude",
             "format"
         ],
+        "queryArgs": [
+            {
+                "name": "dataset",
+                "wire": "dataset"
+            },
+            {
+                "name": "exclude",
+                "wire": "exclude"
+            },
+            {
+                "name": "format",
+                "wire": "format"
+            },
+            {
+                "name": "q",
+                "wire": "q"
+            },
+            {
+                "name": "refine",
+                "wire": "refine"
+            },
+            {
+                "name": "row",
+                "wire": "rows"
+            },
+            {
+                "name": "sort",
+                "wire": "sort"
+            },
+            {
+                "name": "start",
+                "wire": "start"
+            }
+        ],
         "auth": null,
         "status": 200,
         "sample": {
             "nhits": 1,
             "parameters": {
                 "dataset": "x",
-                "format": "x",
                 "rows": 1,
-                "start": 1
+                "start": 1,
+                "format": "x"
             },
             "records": [
                 {
                     "datasetid": "x",
+                    "recordid": "x",
                     "fields": {
+                        "timestamp": "2026-01-01T00:00:00Z",
+                        "location": "x",
                         "frequency": 1,
                         "geopoint": [
                             1
-                        ],
-                        "location": "x",
-                        "timestamp": "2026-01-01T00:00:00Z"
+                        ]
                     },
                     "geometry": {},
-                    "record_timestamp": "2026-01-01T00:00:00Z",
-                    "recordid": "x"
+                    "record_timestamp": "2026-01-01T00:00:00Z"
                 }
             ]
         },

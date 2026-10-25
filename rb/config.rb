@@ -79,6 +79,7 @@ module VisitorFrequenciesLucerneChConfig
           },
           "optspec" => {
             "clearTimer" => "`$FUNCTION`",
+            "now" => "`$FUNCTION`",
             "setTimer" => "`$FUNCTION`",
           },
           "strict" => false,
@@ -224,14 +225,11 @@ module VisitorFrequenciesLucerneChConfig
                   "select" => {
                     "exist" => [
                       "dataset",
-                      "exclude",
-                      "format",
-                      "q",
-                      "refine",
-                      "row",
-                      "sort",
-                      "start",
                     ],
+                  },
+                  "response" => {
+                    "kind" => "json",
+                    "media" => "application/json",
                   },
                 },
               ],

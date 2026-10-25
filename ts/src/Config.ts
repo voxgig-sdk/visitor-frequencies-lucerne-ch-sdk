@@ -102,6 +102,7 @@ class Config {
       },
       "optspec": {
         "clearTimer": "`$FUNCTION`",
+        "now": "`$FUNCTION`",
         "setTimer": "`$FUNCTION`"
       },
       "strict": false,
@@ -256,15 +257,12 @@ class Config {
               },
               "select": {
                 "exist": [
-                  "dataset",
-                  "exclude",
-                  "format",
-                  "q",
-                  "refine",
-                  "row",
-                  "sort",
-                  "start"
+                  "dataset"
                 ]
+              },
+              "response": {
+                "kind": "json",
+                "media": "application/json"
               }
             }
           ]

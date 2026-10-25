@@ -3,5 +3,17 @@
     "SUMMARY.md"
   ],
   "config": ".sdk/doc/qa/vale.ini",
-  "routes": {}
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "Dataset identifier",
+      "GeoJSON geometry object",
+      "Live visitor frequencies in public spaces in Lucerne, Switzerland.",
+      "Production server",
+      "Record creation timestamp",
+      "Record data fields",
+      "Successful response with visitor frequency data",
+      "Unique record identifier"
+    ]
+  }
 }
